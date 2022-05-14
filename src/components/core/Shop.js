@@ -1,11 +1,11 @@
-import { Component } from "react"
+import { useSelector } from "react-redux"
+import Layout from "./Layout"
 
-class Shop extends Component {
-    render() {
-        return (
-            <div>Shop</div>
-        )
-    }
+function Shop() {
+    const state = useSelector(state => state)
+    return (
+        <Layout title="商城" subTitle="这是商城">Shop {JSON.stringify(state)}</Layout>
+    )
 }
 
 export default Shop
